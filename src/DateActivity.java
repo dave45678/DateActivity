@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 
 public class DateActivity
 {
@@ -26,6 +28,11 @@ public class DateActivity
 		GregorianCalendar gc = new GregorianCalendar(2010,2,15);
 		System.out.println("Month:" + gc.get(Calendar.MONTH));
 		//show the month from the array
+		//gc.get will return the integer representing the value you ask for
+		//so if you ask for Calendar.Month then you will return an integer representing the 
+		//Month. Recall, months are zero based. Years and days are representative of their values.
+		//More details about the Gregorian Calendar class can be found online at
+		//https://docs.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html
 		System.out.println("Month:" + months[gc.get(Calendar.MONTH)]);
 		System.out.println("Day:" + gc.get(Calendar.DATE));
 		System.out.println("Year:" + gc.get(Calendar.YEAR));
